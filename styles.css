@@ -1,0 +1,59 @@
+:root {
+    --background-color: #262626;
+    --text-color: #ffffff;
+    --button-background-color: #ffffff;
+    --button-text-color: #ffffff;
+    --main-color: #FFC800;
+    --main-color-md-light: #ffde66;
+    --main-color-light: #ffeeb3;
+    --main-color-md-dark: #e6b400;
+    --main-color-dark: #806400;
+    --secondary-color: #e60004;
+    --secondary-color-md-light: #ff4d4f;
+    --secondary-color-light: #ffcccd;
+    --secondary-color-md-dark: #b30003;
+    --secondary-color-dark: #660002;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+p {}
+
+a {
+    color: var(--main-color);
+    transition: color 200ms;
+}
+
+a:visited {
+    color: var(--main-color-md-dark);
+    transition: color 200ms;
+}
+
+a:visited:hover {
+    color: var(--main-color-md-light);
+}
+
+a:hover {
+    color: var(--main-color-md-light);
+}
+
+ul {}
+
+ol {}
+
+img {}
+
+blockquote {}
+
