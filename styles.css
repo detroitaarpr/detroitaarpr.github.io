@@ -87,7 +87,7 @@ blockquote {
     border-radius: 1vh;
 }
 
-@media (min-width: 900px) {
+@media(min-width: 1000px) {
 
     body {
 	margin: 0 18% 0 18%;
