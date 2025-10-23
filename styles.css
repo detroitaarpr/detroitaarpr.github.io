@@ -24,7 +24,7 @@
     --h2-size: 5vh;
     --h3-size: 4vh;
     --h4-size: 4vh;
-    --text-size: 3.5vh;
+    --text-size: 2.5vh;
 }
 
 body {
@@ -125,7 +125,7 @@ header>h1 {
 nav a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 3.5vh;
+    font-size: var(--text-size);
 }
   
 nav a:visited {
@@ -156,6 +156,13 @@ nav a:visited {
     
     main {
 	margin: 0 7% 0 7%;
+    }
+
+}
+
+@media(min-width: 1800px) {
+    main {
+	margin: 0 20% 0 20%;
     }
 
 }
