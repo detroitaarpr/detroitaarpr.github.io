@@ -117,19 +117,96 @@ header {
 }
 
 header>h1 {
-    margin: 3vh 3vh 0 3vh;
+    margin: 1vh 3vh 0 3vh;
     font-size: var(--h3-size);
     text-align: center;
+}
+
+#close-button {
+    display: block;
+    font-size: var(--h1-size);
+    margin-bottom: 3vh;
+    margin-right: 3vh;
+    text-align: right;
+}
+
+nav.show #close-button {
+    transform: scale(1, 1);
+    transition: 0.3s;
+}
+
+nav.hide #close-button {
+    transform: scale(0, 0);
+    transition: 0.3s;
+}
+
+#close-button button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+}
+
+nav ul {
+    background-color: var(--background-color-dark);
+    list-style-type: none;
+}
+
+nav > ul > li {
+    margin: 0 5% 10% 5%;
 }
 
 nav a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: var(--text-size);
+    font-size: var(--h4-size);
 }
   
 nav a:visited {
     color: var(--text-color);
+}
+
+nav.show {
+    height: 100vh;
+    display: block;
+    transition: 0.3s;
+}
+
+nav.hide {
+    height: 0;
+    transition: 0.3s;
+    overflow: auto;
+}
+
+nav.show ul {
+    transform: scale(1, 1);
+    transition: 0.3s;
+}
+
+nav.hide ul {
+    transform: scale(0, 0);
+    transition: 0.3s;
+}
+
+#menu-button {
+    font-size: var(--h3-size);
+    display: block;
+    text-align: center;
+}
+
+#menu-button button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 @media(min-width: 1000px) {
@@ -157,6 +234,12 @@ nav a:visited {
     main {
 	margin: 0 7% 0 7%;
     }
+
+    #menu-button {
+	display: none;
+    }
+
+    nav.show {}
 
 }
 

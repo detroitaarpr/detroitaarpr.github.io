@@ -5,12 +5,14 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="hide">
+	<span id="close-button"><button onclick="toggleNav()">&times;</button></span>
 	<ul>
 	  <li><a href="/ordinance.html">Pass the People's Bodycam Ordinance!</li>
 	  <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
+      <span id="menu-button"><button onclick="toggleNav()">&#9776;</button></span>
       <h1>Detroit Alliance Against Racist and Political Repression</h1>
     </header>
     <main>
@@ -20,4 +22,5 @@
       </p>
     </main>
   </body>
+  <script src="index.js"></script>
 </html>
