@@ -113,31 +113,42 @@ header {
     box-shadow: 0 .1vh 3vh var(--background-color-dark);
     padding-top: 3vh;
     padding-bottom: 3vh;
-    color: var(--text-color-faded);
+    color: var(--text-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/detroit-alliance-january-rally.jpg");
+    font-weight: bold;
+    background-size: 100%;
+    background-position: center;
 }
 
 header>h1 {
     margin: 1vh 3vh 0 3vh;
     font-size: var(--h3-size);
     text-align: center;
+    font-weight: bold;
 }
 
 #close-button {
     display: block;
     font-size: var(--h1-size);
-    margin-bottom: 3vh;
-    margin-right: 3vh;
+    padding-bottom: 3vh;
+    padding-right: 3vh;
     text-align: right;
 }
 
+header:has(nav.show) {
+    padding: 0;
+}
+
 nav.show #close-button {
+    background-color: var(--background-color-dark);
     transform: scale(1, 1);
-    transition: 0.3s;
+    transition: 0.1s ease-in;
 }
 
 nav.hide #close-button {
-    transform: scale(0, 0);
-    transition: 0.3s;
+    height: 0;
+    transform: scale(0, 1);
+    transition: 0.1s;
 }
 
 #close-button button {
@@ -171,23 +182,25 @@ nav a:visited {
 nav.show {
     height: 100vh;
     display: block;
-    transition: 0.3s;
+    transition: 0.1s ease-in;
+    background-image: none;
 }
 
 nav.hide {
     height: 0;
-    transition: 0.3s;
+    transition: 0.1s;
     overflow: auto;
 }
 
 nav.show ul {
+    height: 100%;
     transform: scale(1, 1);
-    transition: 0.3s;
+    transition: 0.1s ease-in;
 }
 
 nav.hide ul {
-    transform: scale(0, 0);
-    transition: 0.3s;
+    transform: scale(0, 1);
+    transition: 0.1s;
 }
 
 #menu-button {
@@ -210,25 +223,31 @@ nav.hide ul {
 }
 
 @media(min-width: 1000px) {
-    header {
-	padding: 8vh;
-    }
-
 
     header>h1{
 	font-size: var(--h1-size);
 	text-align: left;
+	margin-left: 5%;
     }
 
     nav {
 	position: relative;
-	right: -50%;
 	margin-bottom: 4vh;
     }
 
-    nav>ul>li {
+    nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	gap: 10vh;
+	margin-right: 8vh;
+    }
+
+    nav > ul > li {
 	display: inline;
-	margin-right: 2vw;
+	margin: 0;
+	min-width: 0;
+	min-height: 0;
     }
     
     main {
@@ -239,7 +258,19 @@ nav.hide ul {
 	display: none;
     }
 
-    nav.show {}
+    nav.hide {
+	background: none;
+	transform: scale(1, 1);
+	overflow: hidden;
+	height: auto;
+    }
+
+    nav.hide ul {
+	background: none;
+	transform: scale(1, 1);
+	//height: 6vh;
+	min-height: 0;
+    }
 
 }
 
