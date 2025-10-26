@@ -139,16 +139,18 @@ header:has(nav.show) {
     padding: 0;
 }
 
+nav {
+    background-color: var(--background-color-dark);
+    position: fixed;
+    height: 100vh;
+    overflow: hidden;
+}
+
 nav.show #close-button {
     background-color: var(--background-color-dark);
-    transform: scale(1, 1);
-    transition: 0.1s ease-in;
 }
 
 nav.hide #close-button {
-    height: 0;
-    transform: scale(0, 1);
-    transition: 0.1s;
 }
 
 #close-button button {
@@ -161,7 +163,6 @@ nav.hide #close-button {
 }
 
 nav ul {
-    background-color: var(--background-color-dark);
     list-style-type: none;
 }
 
@@ -180,27 +181,21 @@ nav a:visited {
 }
 
 nav.show {
-    height: 100vh;
+    transform: translateY(10vh;);
     display: block;
-    transition: 0.1s ease-in;
-    background-image: none;
+    transition: 0.2s ease-in;
 }
 
 nav.hide {
-    height: 0;
-    transition: 0.1s;
-    overflow: auto;
+    transform: translateY(-110vh);
+    transition: 0.2s ease-in;
 }
 
 nav.show ul {
     height: 100%;
-    transform: scale(1, 1);
-    transition: 0.1s ease-in;
 }
 
 nav.hide ul {
-    transform: scale(0, 1);
-    transition: 0.1s;
 }
 
 #menu-button {
@@ -255,6 +250,10 @@ nav.hide ul {
     }
 
     #menu-button {
+	display: none;
+    }
+
+    #close-button {
 	display: none;
     }
 
