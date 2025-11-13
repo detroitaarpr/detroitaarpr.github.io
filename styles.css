@@ -20,11 +20,11 @@
     --secondary-color-light: #ffcccd;
     --secondary-color-md-dark: #b30003;
     --secondary-color-dark: #660002;
-    --h1-size: 6vh;
-    --h2-size: 5vh;
-    --h3-size: 4vh;
-    --h4-size: 4vh;
-    --text-size: 2.5vh;
+    --h1-size: 48px;
+    --h2-size: 40px;
+    --h3-size: 32px;
+    --h4-size: 32px;
+    --text-size: 20px;
 }
 
 body {
@@ -45,7 +45,7 @@ main {
 }
 
 h1, h2, h3, h4, p {
-    margin: 3.5vh 0 1vh 0;
+    margin: 24px 0 12px 0;
 }
 
 h1 {
@@ -95,7 +95,7 @@ ol {}
 
 img {
     max-width: 100%;
-    border-radius: .8vh;
+    border-radius: 12px;
 }
 
 blockquote {
@@ -103,7 +103,7 @@ blockquote {
     color: var(--text-color-faded);
     padding: 1.3vw;
     font-style: italic;
-    border-radius: 1vh;
+    border-radius: 14px;
 }
 
 header {
@@ -115,7 +115,6 @@ header {
     padding-bottom: 3vh;
     color: var(--text-color);
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/detroit-alliance-january-rally.jpg");
-    font-weight: bold;
     background-size: 100%;
     background-position: center;
 }
@@ -124,7 +123,6 @@ header>h1 {
     margin: 1vh 3vh 0 3vh;
     font-size: var(--h3-size);
     text-align: center;
-    font-weight: bold;
 }
 
 #close-button {
@@ -143,6 +141,7 @@ nav {
     background-color: var(--background-color-dark);
     position: fixed;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -273,9 +272,17 @@ nav.hide ul {
 
 }
 
-@media(min-width: 1800px) {
+@media(min-width: 1920px) {
+    header h1 {
+	margin: 0 18% 0 18%;
+    }
+
+    nav ul {
+	margin-right: 18%;
+    }
     main {
 	margin: 0 20% 0 20%;
     }
 
 }
+
